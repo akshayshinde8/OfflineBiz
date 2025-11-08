@@ -115,6 +115,7 @@ export default function BusinessDetails({ route, navigation }) {
           onPress={() => navigation.navigate('AddArticle', { businessId })}
           label="Add article"
           icon="plus"
+          isArticle="true"
         />
       </View>
     </View>

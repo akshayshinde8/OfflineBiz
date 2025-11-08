@@ -65,6 +65,7 @@ export default function AddArticle({ route, navigation }) {
           <TextInput
             style={styles.input}
             placeholder="T-shirt"
+            placeholderTextColor="#999"
             value={name}
             onChangeText={setName}
           />
@@ -73,6 +74,7 @@ export default function AddArticle({ route, navigation }) {
           <TextInput
             style={styles.input}
             placeholder="10"
+            placeholderTextColor="#999"
             value={qty}
             onChangeText={setQty}
             keyboardType="numeric"
@@ -82,6 +84,7 @@ export default function AddArticle({ route, navigation }) {
           <TextInput
             style={styles.input}
             placeholder="1999"
+            placeholderTextColor="#999"
             value={price}
             onChangeText={setPrice}
             keyboardType="numeric"

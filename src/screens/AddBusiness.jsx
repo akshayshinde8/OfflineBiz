@@ -34,6 +34,7 @@ export default function AddBusiness({ navigation }) {
           <TextInput
             style={styles.input}
             placeholder="Acme Store"
+            placeholderTextColor="#999"
             value={name}
             onChangeText={setName}
             returnKeyType="done"

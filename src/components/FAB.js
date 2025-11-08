@@ -2,9 +2,18 @@ import React from 'react';
 import { TouchableOpacity, StyleSheet, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-export default function FAB({ onPress, label, icon = 'plus' }) {
+export default function FAB({
+  onPress,
+  label,
+  icon = 'plus',
+  isArticle = false,
+}) {
   return (
-    <TouchableOpacity style={styles.fab} onPress={onPress} activeOpacity={0.85}>
+    <TouchableOpacity
+      style={[styles.fab, isArticle && styles.articleFab]}
+      onPress={onPress}
+      activeOpacity={0.85}
+    >
       <Icon name={icon} size={22} color="#fff" />
       {label ? <Text style={styles.label}>{label}</Text> : null}
     </TouchableOpacity>
@@ -27,6 +36,9 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.15,
     shadowRadius: 6,
     shadowOffset: { width: 0, height: 3 },
+  },
+  articleFab: {
+    bottom: 70, // 👈 lifted higher for article screens
   },
   label: {
     color: '#fff',
